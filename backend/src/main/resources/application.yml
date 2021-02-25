@@ -1,0 +1,23 @@
+
+server:
+  port: 9030
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${TRAINING_DB_URL}/MyReimb
+    password: ${TRAINING_DB_PASSWORD}
+    username: KyloRen
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
