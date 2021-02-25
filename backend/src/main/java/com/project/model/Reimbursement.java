@@ -49,6 +49,17 @@ public class Reimbursement {
     public Reimbursement() {
     }
 
+    public Reimbursement(String reimbAmount, LocalDateTime reimbSubmitted, LocalDateTime reimbResolved, String reimbDescription, User reimbAuthor, User reimbResolver, ReimbursementType reimbType, ReimbursementStatus reimbStatus) {
+        this.reimbAmount = reimbAmount;
+        this.reimbSubmitted = reimbSubmitted;
+        this.reimbResolved = reimbResolved;
+        this.reimbDescription = reimbDescription;
+        this.reimbAuthor = reimbAuthor;
+        this.reimbResolver = reimbResolver;
+        this.reimbType = reimbType;
+        this.reimbStatus = reimbStatus;
+    }
+
     public Reimbursement(int reimbId, String reimbAmount, LocalDateTime reimbSubmitted, LocalDateTime reimbResolved, String reimbDescription, User reimbAuthor, User reimbResolver, ReimbursementType reimbType, ReimbursementStatus reimbStatus) {
         this.reimbId = reimbId;
         this.reimbAmount = reimbAmount;
@@ -131,5 +142,20 @@ public class Reimbursement {
 
     public void setReimbStatus(ReimbursementStatus reimbStatus) {
         this.reimbStatus = reimbStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "Reimbursement{" +
+                "reimbId=" + reimbId +
+                ", reimbAmount='" + reimbAmount + '\'' +
+                ", reimbSubmitted=" + reimbSubmitted +
+                ", reimbResolved=" + reimbResolved +
+                ", reimbDescription='" + reimbDescription + '\'' +
+                ", reimbAuthor=" + reimbAuthor +
+                ", reimbResolver=" + reimbResolver +
+                ", reimbType=" + reimbType +
+                ", reimbStatus=" + reimbStatus +
+                '}';
     }
 }
